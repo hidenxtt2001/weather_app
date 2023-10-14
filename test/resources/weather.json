@@ -1,0 +1,43 @@
+{
+    "coord": {
+      "lon": 106.6539,
+      "lat": 10.8762
+    },
+    "weather": [
+      {
+        "id": 803,
+        "main": "Clouds",
+        "description": "broken clouds",
+        "icon": "04d"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 305.16,
+      "feels_like": 312.16,
+      "temp_min": 305.16,
+      "temp_max": 305.16,
+      "pressure": 1011,
+      "humidity": 70
+    },
+    "visibility": 9000,
+    "wind": {
+      "speed": 1.54,
+      "deg": 0
+    },
+    "clouds": {
+      "all": 75
+    },
+    "dt": 1697256366,
+    "sys": {
+      "type": 1,
+      "id": 9314,
+      "country": "VN",
+      "sunrise": 1697236926,
+      "sunset": 1697279801
+    },
+    "timezone": 25200,
+    "id": 1565593,
+    "name": "Thong Tay Hoi",
+    "cod": 200
+  }
