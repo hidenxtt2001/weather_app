@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
+import 'package:weather_app/config/constant_config.dart';
 import 'package:weather_app/data/weather/datasources/i_weather_datasource.dart';
 import 'package:weather_app/data/weather/dtos/weather_dto.dart';
 
@@ -18,7 +19,7 @@ class WeatherRemoteDatasource implements IWeatherDatasource {
         // TODO : use interceptor instead
         ..addAll(
           {
-            "appid": "5e9c710ccee729a6d46a158cc155c982",
+            "appid": ConstantConfig.openWeatherApi,
           },
         ),
     );

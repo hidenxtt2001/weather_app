@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
+import 'package:weather_app/config/constant_config.dart';
 import 'package:weather_app/data/address/datasources/i_address_datasource.dart';
 import 'package:weather_app/data/address/dtos/address_query_param_request.dart';
 import 'package:weather_app/data/address/dtos/address_response.dart';
@@ -18,7 +19,7 @@ class AddressRemoteDatasource implements IAddressDatasource {
           // TODO : use interceptor instead
           ..addAll(
             {
-              "api_key": "0dwbd6Mq5GHF19n6qZJzGLHagkZEQArU5PcpRLAY",
+              "api_key": ConstantConfig.goongMapApi,
             },
           ));
     // Temp
