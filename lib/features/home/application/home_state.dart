@@ -8,5 +8,6 @@ class HomeState with _$HomeState {
     double? lat,
     double? lng,
     String? input,
+    @Default(true) bool firstRun,
   }) = _HomeState;
 }

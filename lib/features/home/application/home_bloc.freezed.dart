@@ -21,6 +21,7 @@ mixin _$HomeState {
   double? get lat => throw _privateConstructorUsedError;
   double? get lng => throw _privateConstructorUsedError;
   String? get input => throw _privateConstructorUsedError;
+  bool get firstRun => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeStateCopyWith<HomeState> get copyWith =>
@@ -37,7 +38,8 @@ abstract class $HomeStateCopyWith<$Res> {
       Weather? weather,
       double? lat,
       double? lng,
-      String? input});
+      String? input,
+      bool firstRun});
 
   $StatusCopyWith<$Res> get status;
   $WeatherCopyWith<$Res>? get weather;
@@ -61,6 +63,7 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
     Object? lat = freezed,
     Object? lng = freezed,
     Object? input = freezed,
+    Object? firstRun = null,
   }) {
     return _then(_value.copyWith(
       status: null == status
@@ -83,6 +86,10 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
           ? _value.input
           : input // ignore: cast_nullable_to_non_nullable
               as String?,
+      firstRun: null == firstRun
+          ? _value.firstRun
+          : firstRun // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 
@@ -120,7 +127,8 @@ abstract class _$$HomeStateImplCopyWith<$Res>
       Weather? weather,
       double? lat,
       double? lng,
-      String? input});
+      String? input,
+      bool firstRun});
 
   @override
   $StatusCopyWith<$Res> get status;
@@ -144,6 +152,7 @@ class __$$HomeStateImplCopyWithImpl<$Res>
     Object? lat = freezed,
     Object? lng = freezed,
     Object? input = freezed,
+    Object? firstRun = null,
   }) {
     return _then(_$HomeStateImpl(
       status: null == status
@@ -166,6 +175,10 @@ class __$$HomeStateImplCopyWithImpl<$Res>
           ? _value.input
           : input // ignore: cast_nullable_to_non_nullable
               as String?,
+      firstRun: null == firstRun
+          ? _value.firstRun
+          : firstRun // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -178,7 +191,8 @@ class _$HomeStateImpl implements _HomeState {
       this.weather,
       this.lat,
       this.lng,
-      this.input});
+      this.input,
+      this.firstRun = true});
 
   @override
   @JsonKey()
@@ -191,10 +205,13 @@ class _$HomeStateImpl implements _HomeState {
   final double? lng;
   @override
   final String? input;
+  @override
+  @JsonKey()
+  final bool firstRun;
 
   @override
   String toString() {
-    return 'HomeState(status: $status, weather: $weather, lat: $lat, lng: $lng, input: $input)';
+    return 'HomeState(status: $status, weather: $weather, lat: $lat, lng: $lng, input: $input, firstRun: $firstRun)';
   }
 
   @override
@@ -206,12 +223,14 @@ class _$HomeStateImpl implements _HomeState {
             (identical(other.weather, weather) || other.weather == weather) &&
             (identical(other.lat, lat) || other.lat == lat) &&
             (identical(other.lng, lng) || other.lng == lng) &&
-            (identical(other.input, input) || other.input == input));
+            (identical(other.input, input) || other.input == input) &&
+            (identical(other.firstRun, firstRun) ||
+                other.firstRun == firstRun));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, status, weather, lat, lng, input);
+      Object.hash(runtimeType, status, weather, lat, lng, input, firstRun);
 
   @JsonKey(ignore: true)
   @override
@@ -226,7 +245,8 @@ abstract class _HomeState implements HomeState {
       final Weather? weather,
       final double? lat,
       final double? lng,
-      final String? input}) = _$HomeStateImpl;
+      final String? input,
+      final bool firstRun}) = _$HomeStateImpl;
 
   @override
   Status get status;
@@ -238,6 +258,8 @@ abstract class _HomeState implements HomeState {
   double? get lng;
   @override
   String? get input;
+  @override
+  bool get firstRun;
   @override
   @JsonKey(ignore: true)
   _$$HomeStateImplCopyWith<_$HomeStateImpl> get copyWith =>

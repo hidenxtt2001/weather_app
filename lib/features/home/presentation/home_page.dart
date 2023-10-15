@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
               child: TextField(
                 controller: controller,
                 onChanged: (value) {
@@ -85,6 +85,9 @@ class _HomePageState extends State<HomePage> {
                   },
                   builder: (context, weather) {
                     if (weather == null) {
+                      if (homeBloc.state.firstRun) {
+                        return Container();
+                      }
                       return SizedBox(
                         width: double.infinity,
                         child: Column(

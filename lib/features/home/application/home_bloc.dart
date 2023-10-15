@@ -51,6 +51,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       emit(state.copyWith(status: const Status.loading()));
       final result = await _getWeatherByLatLongUsecase
           .call(GetWeatherInput(lat: state.lat!, long: state.lng!));
+      emit(state.copyWith(firstRun: false));
       result.fold(
         (l) => throw l,
         (r) => emit(
