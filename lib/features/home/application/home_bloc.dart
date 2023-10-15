@@ -53,7 +53,10 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           .call(GetWeatherInput(lat: state.lat!, long: state.lng!));
       emit(state.copyWith(firstRun: false));
       result.fold(
-        (l) => throw l,
+        (l) {
+          emit(state.copyWith(weather: null));
+          throw l;
+        },
         (r) => emit(
           state.copyWith(
             weather: r,
