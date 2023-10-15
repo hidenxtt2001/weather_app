@@ -7,12 +7,15 @@ import 'package:weather_app/domain/weather/entity/weather.dart';
 import 'package:weather_app/domain/weather/repository/i_weather_repository.dart';
 import 'package:weather_app/domain/weather/usecases/input/get_weather_input.dart';
 
+@lazySingleton
 class GetWeatherByLatLongUsecase implements UseCase<Weather, GetWeatherInput> {
-  final IWeatherRepository weatherRepository;
-  const GetWeatherByLatLongUsecase({required this.weatherRepository});
+  final IWeatherRepository _weatherRepository;
+  const GetWeatherByLatLongUsecase(
+      {required IWeatherRepository weatherRepository})
+      : _weatherRepository = weatherRepository;
   @override
   Future<Either<Failure, Weather>> call(GetWeatherInput params) async {
-    final res = await weatherRepository.getWeatherByLatLong(
+    final res = await _weatherRepository.getWeatherByLatLong(
       lat: params.lat,
       long: params.long,
     );

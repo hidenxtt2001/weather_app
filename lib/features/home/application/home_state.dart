@@ -2,6 +2,11 @@ part of 'home_bloc.dart';
 
 @freezed
 class HomeState with _$HomeState {
-  const factory HomeState.initial() = _Initial;
-  const factory HomeState.loadInProgress() = _LoadInProgress;
+  const factory HomeState({
+    @Default(Status.idle()) Status status,
+    Weather? weather,
+    double? lat,
+    double? lng,
+    String? input,
+  }) = _HomeState;
 }

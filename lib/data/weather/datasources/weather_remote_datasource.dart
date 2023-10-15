@@ -5,6 +5,7 @@ import 'package:weather_app/data/weather/dtos/weather_dto.dart';
 
 import '../dtos/weather_request.dart';
 
+@LazySingleton(as: IWeatherDatasource)
 class WeatherRemoteDatasource implements IWeatherDatasource {
   final Dio weatherDio;
 
@@ -14,6 +15,7 @@ class WeatherRemoteDatasource implements IWeatherDatasource {
     final res = await weatherDio.get(
       '/weather',
       queryParameters: request.toJson()
+        // TODO : use interceptor instead
         ..addAll(
           {
             "appid": "5e9c710ccee729a6d46a158cc155c982",

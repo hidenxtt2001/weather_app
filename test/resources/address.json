@@ -1,0 +1,42 @@
+{
+  "address_components": [
+    {
+      "long_name": "2975 QL1A",
+      "short_name": "2975 QL1A"
+    },
+    {
+      "long_name": "P",
+      "short_name": "P"
+    },
+    {
+      "long_name": "Quận 12",
+      "short_name": "Quận 12"
+    },
+    {
+      "long_name": "Hồ Chí Minh 700000",
+      "short_name": "Hồ Chí Minh 700000"
+    }
+  ],
+  "formatted_address": "2975 QL1A, P, Quận 12, Hồ Chí Minh 700000",
+  "geometry": {
+    "location": {
+      "lat": 10.8271161,
+      "lng": 106.6039648
+    },
+    "boundary": null
+  },
+  "place_id": "Tq18m6SvrJl5hmJalleZ4mO_RyqyUrDaSKlDXZF-grx4gGk7nFWVnE5TvVwnbqD1T1dXoydTgZ9grTABqH7s13uAS1ugfZrOer5IXJ5unvd7hFsIqAiOnnmsUIyOeCeXe",
+  "reference": "Tq18m6SvrJl5hmJalleZ4mO_RyqyUrDaSKlDXZF-grx4gGk7nFWVnE5TvVwnbqD1T1dXoydTgZ9grTABqH7s13uAS1ugfZrOer5IXJ5unvd7hFsIqAiOnnmsUIyOeCeXe",
+  "plus_code": {
+    "compound_code": "+BLN4S8 P, Quận 12, Hồ Chí Minh 700000",
+    "global_code": "46AQ5+BLN4S8"
+  },
+  "compound": {
+    "district": "Quận 12",
+    "commune": "Tân Thới Nhất",
+    "province": "Hồ Chí Minh"
+  },
+  "types": [],
+  "name": "2975 QL1A",
+  "address": "P, Quận 12, Hồ Chí Minh 700000"
+}
